@@ -1,0 +1,14 @@
+name: PersonalViewDistance
+version: 1.0.0
+api-version: 1.13
+author: Karl Essinger (KarlofDuty)
+website: http://karlofduty.com
+main: com.karlofduty.personalviewdistance.PersonalViewDistance
+permissions:
+  personalviewdistance:
+    description: Lets a player use the plugin.
+    default: op
+commands:
+  viewdistance:
+    description: Changes the player's view distance.
+    usage: /viewdistance <range>
