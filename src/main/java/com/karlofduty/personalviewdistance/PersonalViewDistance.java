@@ -1,5 +1,6 @@
 package com.karlofduty.personalviewdistance;
 import org.apache.commons.lang.StringUtils;
+import org.bstats.bukkit.MetricsLite;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,7 +13,9 @@ public class PersonalViewDistance extends JavaPlugin
     @Override
     public void onEnable()
     {
+        MetricsLite metrics = new MetricsLite(this);
         this.getCommand("viewdistance").setExecutor(new ViewDistanceCommand());
+        getServer().getPluginManager().registerEvents(new AutoDistance(), this);
     }
 
     public class ViewDistanceCommand implements CommandExecutor

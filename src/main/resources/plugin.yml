@@ -11,6 +11,9 @@ permissions:
   viewdistance.x:
     description: Lets a player use a specific view distance.
     default: false
+  viewdistance.autodistance:
+    description: Sets a player's viewdistance to the highest one they have access to.
+    default: false
 commands:
   viewdistance:
     description: Changes the player's view distance.
